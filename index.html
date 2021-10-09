@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Rock Paper Scissors Game</title>
+        <meta name="description" content="A sample rock paper scissors game designed and developed by me for a school project">
+        <meta name="keywords" content="rock, paper, scissors, game, fun, html, css, javascript, coding">
+        <meta name="author" content="Jiahua Cui">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/display.css">
+        <script data-ad-client="ca-pub-6382188087217805" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    </head>
+    <body>
+        <div class="portrait">
+            <figure>
+                <img src="svg/landscape.svg" alt="Please turn your phone to landscape">
+                <figcaption>Please Turn Your Phone to Landscape</figcaption>
+            </figure>
+        </div>
+
+        <section id="game">
+
+            <div id="bg">
+            <object data="svg/mountain.svg" type="image/svg+xml" id="mountain" alt="moutain"></object>
+            <object data="svg/ground.svg" type="image/svg+xml" id="ground" alt="ground"></object>
+            <object data="svg/moon.svg" type="image/svg+xml" id="moon" alt="moon"></object>
+            <object data="svg/cloud_left.svg" type="image/svg+xml" id="cloud_left" alt="cloud"></object>
+            <object data="svg/cloud_right.svg" type="image/svg+xml" id="cloud_right" alt="cloud"></object>
+            <object data="svg/thunder_left.svg" type="image/svg+xml" id="thunder_left" alt="thunder"></object>
+            <object data="svg/thunder_left.svg" type="image/svg+xml" id="thunder_left2" alt="thunder"></object>
+            <object data="svg/thunder_right.svg" type="image/svg+xml" id="thunder_right" alt="thunde"></object>
+            <object data="svg/thunder_right.svg" type="image/svg+xml" id="thunder_right2" alt="thunder"></object>
+            <object data="svg/rain.svg" type="image/svg+xml" id="rain1" alt="rain"></object>
+            <object data="svg/rain.svg" type="image/svg+xml" id="rain2" alt="rain"></object>
+            <object data="svg/rain.svg" type="image/svg+xml" id="rain3" alt="rain"></object>
+            <object data="svg/battle.svg" type="image/svg+xml" id="battle" alt="battle"></object>
+            <object data="svg/ko.svg" type="image/svg+xml" id="ko" alt="ko"></object>
+            <object data="svg/end.svg" type="image/svg+xml" id="end" alt="end"></object>
+        </div>
+
+            <div id="health">
+
+                <div id="red_green"></div>
+                <div id="red_red"></div>
+                <div id="blue_green"></div>
+                <div id="blue_red"></div>
+
+            </div>
+
+            <div id="player_container">
+                <div id="choice">
+                    <img src="svg/rock.svg" id="red_rock" alt="rock">
+                    <img src="svg/paper.svg" id="red_paper" alt="paper">
+                    <img src="svg/scissors.svg" id="red_scissors" alt="scissors">
+                </div>
+                <object data="svg/red.svg" type="image/svg+xml" id="red" alt="player"></object>
+            </div>
+
+            <div id="cpu_container">
+                <div id="blue_move">
+                    <img src="svg/rock.svg" id="blue_rock" alt="rock">
+                    <img src="svg/paper.svg" id="blue_paper" alt="paper">
+                    <img src="svg/scissors.svg" id="blue_scissors" alt="scissors">
+                </div>
+                <img src="svg/question.svg" id="question" alt="mystery">
+                <object data="svg/blue.svg" type="image/svg+xml" id="blue" alt="npc"></object>
+
+            </div>
+
+            <div id="red_dialogue">
+                <object data="svg/red1.svg" type="image/svg+xml" id="red1" alt="red_dialogue"></object>
+                <object data="svg/red2.svg" type="image/svg+xml" id="red2" alt="red_dialogue"></object>
+                <object data="svg/red3.svg" type="image/svg+xml" id="red3" alt="red_dialogue"></object>
+                <object data="svg/red_lose.svg" type="image/svg+xml" id="red_lose" alt="lose_img"></object>
+                <object data="svg/red_win.svg" type="image/svg+xml" id="red_win" alt="win_img"></object>
+              
+            </div>
+
+            <div id="blue_dialogue">
+
+                <object data="svg/blue1.svg" type="image/svg+xml" id="blue1" alt="blue_dialogue"></object>
+                <object data="svg/blue2.svg" type="image/svg+xml" id="blue2" alt="blue_dialogue"></object>
+                <object data="svg/blue_lose.svg" type="image/svg+xml" id="blue_lose" alt="lose_img"></object>
+                <object data="svg/blue_win.svg" type="image/svg+xml" id="blue_win" alt="win_img"></object>
+
+            </div>
+
+            <div id="text">
+                <h4 id="rock_text">You threw an expired cheese at blue</h4>
+                <h4 id="paper_text">You threw an useless bachelor's degree at blue</h4>
+                <h4 id="scissors_text">You threw some office supplies at blue</h4>
+            </div>
+
+            <div id="eval_text">
+                <h4 id="tie_text">Blue was thinking the same thing</h4>
+                <h4 id="lose_text">Blue anticipated your move</h4>
+                <h4 id="win_text">Blue was garbage</h4>
+
+            </div>
+
+
+
+
+
+        </section>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

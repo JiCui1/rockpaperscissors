@@ -1,0 +1,517 @@
+@font-face{
+    font-family: "text";
+    src: url(../fonts/orange\ kid.ttf)
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #365f57;
+    height: 100vh;
+    overflow: hidden;
+}
+
+section{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../svg/bg.svg);
+    background-size: cover;
+    background-position: center;
+    position:relative;
+    overflow: hidden;
+}
+
+#mountain{
+    position: absolute;
+    z-index: 9;
+    pointer-events: none;
+    width: 100%;
+    bottom: 0px;
+}
+
+#ground{
+    position: absolute;
+    bottom: -20px;
+    left: -50px;
+    width: 1600px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+#moon{
+    position: absolute;
+    width: 300px;
+    right: 300px;
+    bottom: 340px;
+}
+
+#cloud_left{
+    position: absolute;
+    left: -400px;
+    top: 250px;
+    width: 1000px;
+    z-index: 10;
+    animation: cloud_left 200s linear forwards infinite;
+}
+
+#cloud_right{
+    position: absolute;
+    right: -400px;
+    top: 120px;
+    width: 1000px;
+    animation: cloud_right 100s linear forwards infinite;
+}
+
+#thunder_left{
+    position: absolute;
+    left:230px;
+    top: -350px;
+    width: 120px;
+    z-index: 8;
+    animation: thunder_left 15s forwards linear infinite 3s;
+    pointer-events: none;
+}
+
+#thunder_left2{
+    position: absolute;
+    left:500px;
+    top: -350px;
+    width: 120px;
+    z-index: 8;
+    animation: thunder_left 15s forwards linear infinite 11s;
+    pointer-events: none;
+}
+
+#thunder_right{
+    position: absolute;
+    right: 300px;
+    top: -700px;
+    width: 120px;
+    animation: thunder_right 15s forwards linear infinite 7s;
+    pointer-events: none;
+}
+
+#thunder_right2{
+    position: absolute;
+    right: 500px;
+    top: -700px;
+    width: 120px;
+    animation: thunder_right 15s forwards linear infinite 13s;
+    pointer-events: none;
+}
+
+#rain1{
+    position: absolute;
+    z-index: 11;
+    left:0;
+    opacity: 0.6;
+    animation: drop 0.9s linear forwards infinite;
+    z-index: 10;
+    pointer-events: none;
+}
+
+#rain2{
+    position: absolute;
+    z-index: 11;
+    left: 130px;
+    top: -30px;
+    opacity: 0.7;
+    animation: drop 0.5s linear forwards infinite;
+    z-index: 10;
+    pointer-events: none;
+}
+
+#rain3{
+    position: absolute;
+    z-index: 11;
+    left: 170px;
+    top: -50px;
+    opacity: 0.5;
+    animation: drop 0.7s linear forwards infinite;
+    z-index: 10;
+    pointer-events: none;
+}
+
+
+
+#player_container{
+    position: absolute;
+    width: 300px;
+    height: 180px;
+    /* border: 3px solid white; */
+    bottom: 98px;
+    left: 200px;
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#red{
+    width: 80px;
+    position: absolute;
+    bottom: 0px;
+}
+
+
+#choice{
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#choice img{
+    width: 80px;
+    cursor: pointer;
+}
+
+#blue_move{
+    position: absolute;
+    right: 180px;
+    top: 120px;
+}
+
+#blue_move img{
+    width: 40px;
+    position: absolute;
+}
+
+#question{
+    width: 80px;
+    position: absolute;
+    top: 10px;
+}
+
+#cpu_container{
+    position: absolute;
+    width: 300px;
+    height: 180px;
+    /* border: 3px solid white; */
+    bottom: 98px;
+    right: 200px;
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#blue{
+    width: 80px;
+    position: absolute;
+    bottom: 0px;
+}
+
+#red_green, #red_red{
+    width: 40%;
+    height: 40px;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+
+}
+
+#red_green, #blue_green{
+    background-color: #34cb73
+}
+
+#red_red, #blue_red{
+    background-color: #dd2238
+}
+
+
+#blue_green, #blue_red{
+    width: 40%;
+    height: 40px;
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    
+}
+
+#blue_green, #red_green{
+    z-index: 11;
+}
+
+#blue_red, #red_red{
+    z-index: 10;
+}
+
+#red_dialogue{
+    position: absolute;
+    bottom: 100px;
+    left: 200px;
+    z-index: 20;
+    width: 300px;
+    height: 300px;
+}
+
+#red_dialogue object, #blue_dialogue object{
+    position: absolute;
+    top:0;
+    left: 0;
+    display: block;
+}
+
+
+#blue_dialogue{
+    position: absolute;
+    bottom: 100px;
+    right: 200px;
+    z-index: 20;
+    width: 300px;
+    height: 300px;
+}
+
+#battle, #ko, #end{
+    width: 300px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,150px);
+    z-index: 12;
+}
+
+#text{
+    width: 400px;
+    height: 30px;
+    position: absolute;
+    bottom: 170px;
+    left: 200px;
+    z-index: 19;
+}
+
+#eval_text{
+    width: 400px;
+    height: 30px;
+    position: absolute;
+    top:50%;
+    z-index: 19;
+    left: 50%;
+
+}
+
+#text h4{
+    color:#e6c873;
+    font-family: text;
+    font-weight: 10;
+    font-size: 20px;
+    position: absolute;
+    top:0;
+    left:0;
+    text-align: center;
+}
+
+#eval_text h4{
+    color:#e6c873;
+    font-family: text;
+    font-weight: 10;
+    font-size: 30px;
+    position: absolute;
+    top:0;
+    left:0;
+    text-align: center;
+}
+
+@keyframes drop{
+    from{transform: translate(0,0);}
+    to{transform: translate(-70px, 120px);}
+}
+
+@keyframes thunder_left{
+    0%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    2%{
+        transform: translateY(330px);
+        opacity: 1;
+    }
+    7%{
+        opacity: 1
+    }
+    10%{
+        /* transform: translateY(200px); */
+        opacity: 0;
+    }
+    70%{
+        /* transform: translateY(200px); */
+        opacity: 0;
+    }
+    100%{
+        /* transform: translateY(200px); */
+        opacity: 0;
+    }
+}
+
+@keyframes thunder_right{
+    0%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    2%{
+        transform: translateY(700px);
+        opacity: 1;
+    }
+    7%{
+        opacity: 1
+    }
+    10%{
+        /* transform: translateY(200px); */
+        opacity: 0;
+    }
+    70%{
+        /* transform: translateY(200px); */
+        opacity: 0;
+    }
+    100%{
+        /* transform: translateY(200px); */
+        opacity: 0;
+    }
+}
+
+
+@keyframes cloud_left{
+    from{transform:translateX(-700px)}
+    to{transform:translateX(2300px)}
+}
+
+
+@keyframes cloud_right{
+    from{transform:translateX(1000px)}
+    to{transform:translateX(-2300px)}
+}
+
+/* regular tablet */
+@media only screen and (max-width:1024px){
+    #player_container{
+        left: 20px;
+    }
+
+    #cpu_container{
+        right: 20px;
+    }
+    #moon{
+        right: 100px;
+    }
+
+}
+
+/* large tablet */
+@media only screen and (max-width: 1366px){
+    #player_container{
+        left: 100px;
+    }
+
+    #cpu_container{
+        right: 100px;
+    }
+
+    #moon{
+        right: 100px;
+        bottom: 440px;
+    }
+}
+
+
+/* regular pheone */
+@media only screen and (max-width:813px){
+    #player_container{
+        left: 70px; 
+        width: 200px;
+    }
+    
+    #player_container img{
+        width: 40px;
+        margin-top: 40px;
+        z-index: 3000;
+    }
+
+    #red_scissors{
+        z-index: 3000;
+    }
+
+    #red{
+        width: 40px;
+    }
+
+    #blue{
+        width: 40px;
+
+    }
+
+    #cpu_container{
+        right: 10px;
+    }
+
+    #cpu_container img{
+        width: 40px;
+        margin-top: 40px;
+    }
+
+    #blue_move img{
+        width: 40px;
+        margin-top:19px;
+    }
+
+    #moon{
+        right: 100px;
+        width: 200px;
+        bottom: 150px;
+    }
+
+    #red_green, #red_red{
+        height: 20px;
+        width: 40%
+    }
+
+    #blue_green, #blue_red{
+        height: 20px;
+        width: 40%;
+    }
+
+    #red_dialogue{
+        width: 200px;
+        bottom: -30px;
+        left: 100px;
+    }
+
+    #blue_dialogue{
+        width: 200px;
+        bottom: -30px;
+        right: 100px;
+    }
+
+    #text{
+        bottom:130px;
+        left: 100px;
+    }
+
+    #text h4{
+        font-size: 15px;
+    }
+
+    #eval_text h4{
+        font-size: 20px;
+    }
+
+    #end{
+        width: 20%;
+        z-index: 30;
+    }
+
+    #cloud_left{
+        width: 300px;
+        top: 50px;
+    }
+    #cloud_right{
+        width: 300px;
+        top: 20px;
+    }
+
+}

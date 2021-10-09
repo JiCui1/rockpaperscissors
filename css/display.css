@@ -1,0 +1,26 @@
+
+
+.portrait figcaption{
+    opacity:0;
+}
+
+@media screen and (orientation:portrait){
+    .portrait{
+        background-color: #2a4941;
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+        top:0;
+        left:0;
+        display:grid;
+        place-items: center;
+        z-index: 21;
+    }
+}
+
+
+@media screen and (orientation:landscape){
+    .portrait{
+        display:none;
+    }
+}

@@ -1,0 +1,2 @@
+<?xml-stylesheet type="text/css" href="svg.css" ?>
+<svg id="bg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080"><defs><linearGradient id="linear-gradient" x1="960" x2="960" y2="1080" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#13241a"/><stop offset="0.44" stop-color="#214236"/><stop offset="0.88" stop-color="#306356"/></linearGradient></defs><g id="backdrop"><rect width="1920" height="1080" fill="url(#linear-gradient)"/></g></svg>
